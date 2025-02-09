@@ -9,11 +9,11 @@ const passport = require("passport");
 require("./config/passport")(passport); // 執行passport套件
 const cors = require("cors");
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/mernDB";
+const MONGO_URL = process.env.MONGO_URL || "mongodb://localhost:27017/mernDB";
 
 // 連結MongoDB
 mongoose
-  .connect(MONGO_URI)
+  .connect(MONGO_URL)
   .then(() => {
     console.log("Connecting to mongodb...");
   })
